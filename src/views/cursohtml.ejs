@@ -1,0 +1,322 @@
+<%- include('includes/head'); %>
+<body>
+
+        
+  <STYle>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+
+/* SCROLL AQUI */
+
+
+::-webkit-scrollbar {
+width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: transparent;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+
+/* ESTRUTURA AQUI */
+
+
+body{
+  margin:0;
+  padding:0;
+  color: #242424;
+  font-family:'Poppins', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 900;
+  color: #000;
+}
+
+
+/* PARALLAX AQUI */
+
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: entrada-animacao 0.5s ease-in-out forwards;
+}
+
+@keyframes entrada-animacao {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main{
+  display: block;
+  background-color: #FFF;
+}
+
+.container{
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p{
+  margin-bottom: 40px;
+}
+
+section.module:last-child{
+  margin-bottom: 0;
+}
+
+section.module h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module.content{
+ padding: 40px 0;
+ background: #ece7d5; 
+}
+
+section.module.content:last-child{
+  background-color: #010101;
+}
+
+section.module.parallax{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+section.module.parallax:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+}
+
+
+/* LISTA AQUI */
+
+
+.card {
+  width: 100vh;
+  height: 342vh;
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+ol {
+  margin: 5vh auto;
+  padding: auto;
+  font-size: 1em;
+  list-style-type: decimal-leading-zero;
+  display: flex;
+  flex-direction:column;
+}
+
+li{
+  font-size: 1.2em;
+  margin: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+}
+
+.card li span{
+  margin-top: auto;
+}
+
+.card ol li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #242424;
+  background-color: #ece7d5;
+  padding: 4px 10px;
+  border-radius: 25px;
+  transition: background-color 0.1s ease, transform 01s ease;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.card li a:hover{
+  background-color: #000;
+  color: #FFF;
+  transform:scale(1.1)
+}
+
+.card li:hover{
+  color: #242424;
+}
+
+li:last-child{
+  border: none;
+}
+
+section.module.parallax-1{
+  background-image: url("/cssfundo.png");
+}
+
+section.module.parallax-2{
+  background-image: url("/htmlfundo.jpg");
+}
+
+section.module.parallax-3{
+  background-image: url("/foto.png");
+}
+
+section.module.parallax h1{
+  color: #FFF;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 820px) {
+  section.module h2 {
+    font-size: 32px;
+  }
+  .module h2, p{
+    padding: 0 8px;
+  }
+
+  .container{
+    margin:0;
+    padding:0;
+  }
+
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+}
+  </STYle>
+
+  <div class="wrapper">
+    <main>
+      <section class="module parallax parallax-1">
+        <h1></h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>SOBRE...</h2>
+          <p>
+            Cascading Style Sheets é um mecanismo para adicionar estilos (cores, fontes, espaçamento) a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags . Também é possível, adicionar estilos adicionando um link para um arquivo CSS que contém os estilos. Assim, quando se quiser alterar a aparência dos documentos vinculados a este arquivo CSS, basta modifica-lo.
+          </p>
+          <p>
+            CSS é uma das principais linguagens da open web e é padronizada em navegadores web. Esse módulo inicia com o funcionamento básico do CSS, incluindo seletores e propriedades, escrever regras CSS, aplicar CSS ao HTML, como especificar comprimento, cor, e outras unidades em CSS, cascata e herança, o básico do modelo de caixas, e depuração de CSS.
+          </p>          
+        </div>
+      </section>
+
+      <section class="module parallax parallax-2">
+        <h1>método de aprendizado</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Video aulas gratuitas / PDFs</h2>
+          <p>
+            O método de ensino adotado por nós, será por meio de video aulas gratuitas disponibilzadas por parceiros na plataforma do YouTube. Também temos disponivel a opção de aulas escritas, por meio de PDFs.
+          </p>
+          <p>
+            Faça bom uso dos conteúdos disponibilizados, tudo estará organizado em tópicos e/ou aulas logo abaixo. De o primeiro passo para se tornar um profissional capacitado.
+          </p>
+          <p>
+            Faça bom proveito!
+          </p>          
+        </div>
+      </section>
+
+      <section class="module parallax parallax-3">
+        <h1>conteúdo</h1>
+      </section>
+      <section class="module content">
+        <div class="container">
+          <h1>Curso completo e atual de HTML5 e CSS3 - Módulo 1 de 5</h1>
+          <div class="scroll">
+          <div class="card" id="myList">
+          <ol>
+            <li>Começa aqui o novo @CursoemVideo de HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Video</a></li>
+            <li>O que vamos aprender no módulo 01? - @Curso em Vídeo HTML5 + CSS3</a>  <span><a href="https://www.youtube.com/watch?v=jgQjeqGRdgA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=2">Video</a></li>
+            <li>Precisamos fazer um acordo - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=VfIXgGJWLvA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=3">Video</a></li>
+            <li>Será que este curso é para mim? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=57wyfS560Uk&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=4">Video</a></li>
+            <li>Melhores livros para aprender HTML5 e CSS3 - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=0zLjVhHdOm8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=5">Video</a></li>
+            <li>Como a Internet chega na minha casa? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=F74GKCLXUWM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=6">Video</a></li>
+            <li>Como a Internet funciona? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=nlO5hySqJFA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=7">Video</a></li>
+            <li>O que é domínio e hospedagem? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=RFHSt1PCy0k&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=8">Video</a></li>
+            <li>A diferença entre HTML, CSS e JavaScript - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=B4FU3NFRTDw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=9">Video</a></li>
+            <li>Front-end, Back-end e Full stack - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=iSqf2iPqJNM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=10">Video</a></li>
+            <li>Instalando todas as ferramentas - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=UForX7ehChM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=11">Video</a></li>
+            <li>Seu primeiro código HTML - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=E6CdIawPTh0&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=12">Video</a></li>
+            <li>Parágrafos e Quebras - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=f6NTJdtEFOc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=13">Video</a></li>
+            <li>Símbolos e Emoji no seu site - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=nhMdFe3WwYc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=14">Video</a></li>
+            <li>Uso de imagens no seu site? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=bDULqeGEvAw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=15">Video</a></li>
+            <li>Quais são os formatos para imagens na Web? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=xg-vHgLF0mI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=16">Video</a></li>
+            <li>Tamanho das imagens importa para um site? - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=8rkuukKA8a4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=17">Video</a></li>
+            <li>A tag img em HTML5 - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=CwOmEetWMnU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=18">Video</a></li>
+            <li>Como mudar o favicon de um site - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=1ZeettFfxys&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=19">Video</a></li>
+            <li>Hierarquia de Títulos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=aiOEBhozEOg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=20">Video</a></li>
+            <li>Semântica na HTML5 é importante - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=HaSgt1hK2Fs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=21">Video</a></li>
+            <li>Negrito e Itálico do jeito certo - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=T-d_hsO3hUI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=22">Video</a></li>
+            <li>Formatações adicionais em HTML - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=8TgKFYkcO5Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=23">Video</a></li>
+            <li>Citações e Códigos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="youtube.com/watch?v=HaSgt1hK2Fs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=21">Video</a></li>
+            <li>Listas OL e UL - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=JlE0pzESf5g&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=25">Video</a></li>
+            <li>Listas mistas e de definição - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=Ez1kgIyoGuE&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=26">Video</a></li>
+            <li>Links e Âncoras em HTML5 - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27">Video</a></li>
+            <li>Links internos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=LeLnlT-ZKw8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=28">Video</a></li>
+            <li>Links para download - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=Jszz7M676y8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=29">Video</a></li>
+            <li>Desafios propostos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=suL56Mdx22Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=30">Video</a></li>
+            <li>Imagens Dinâmicas - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=E01LDVj0Rpg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=31">Video</a></li>
+            <li>Imagens que se adaptam sozinhas - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=32">Video</a></li>
+            <li>Colocando áudio no seu site - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=4OZYsFl-J9s&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=33">Video</a></li>
+            <li>Formatos de vídeo para seu site - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=DjOSM72cYac&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=34">Video</a></li>
+            <li>Vídeos em hospedagem própria - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=TCeyIwFGkYo&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=35">Video</a></li>
+            <li>Incorporação de vídeos externos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36">Video</a></li>
+            <li>Desafio: um site com vídeos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=gqrySQQzvvQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=37">Video</a></li>
+            <li>Estilos CSS inline - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=byqhpuVpvEI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=38">Video</a></li>
+            <li>Estilos CSS internos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=fzyab4P2pn8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=39">Video</a></li>
+            <li>tilos CSS externos - @Curso em Vídeo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=-i1JVMspDJQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=40">Video</a></li>
+            <li>Fim do Módulo 1: Certificados liberados - @CursoemVideo HTML5 e CSS3</a>  <span><a href="https://www.youtube.com/watch?v=xYLizixflv4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=41">Video</a></li>
+          </ol>
+        </div>
+        </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

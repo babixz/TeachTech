@@ -1,0 +1,97 @@
+<%- include('includes/head'); %>
+<body>
+    <%- include('includes/nav'); %>
+    
+    <section class="bannerLogin">
+        <div class="container-login">
+
+            <div class="content-login first-content">
+    
+                <div class="first-column">
+    
+                    <h2 class="title-login title-primary">Bem Vindo de volta!</h2>
+                    <p class="description-login description-primary">Para se manter conectado</p>
+                    <p class="description-login description-primary">faça o login com suas informações.</p>
+                    <button id="signin" class="btn-login btn-primary">Login</button>
+    
+                </div><!-- FIRST COLUMMN -->
+                <div class="second-column">
+    
+                    <h2 class="title-login title-second">Crie sua conta</h2>
+    
+                    <div class="social-media">
+    
+                        <ul class="list-social-media">
+                            
+    
+                        </ul>
+    
+                    </div><!-- SOCIAL MEDIA -->
+                    <p class="description-login description-second">            <div class="messages">
+                        <%- include('includes/messages'); %>
+                    </div></p>
+                    <form class="form-login"  action="/login/register" method="POST">
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>> 
+                        <label class="label-input-login">
+                            <input  placeholder="Digite aqui seu email INSTITUCIONAL" type="email" name="email"  type="text" >
+                        </label>
+            
+                        <label class="label-input-login">
+                            <input type="password" name="password" type="password" placeholder="Crie sua senha">
+                        </label>
+                            
+                        <button type="submit" class="btn-login btn-second">Registre-se</button>
+    
+                    </form>
+                </div><!-- SECOND COLUMN -->
+    
+            </div><!-- FIRST CONTENT -->
+            <div class="content-login second-content">
+                <div class="first-column">
+    
+                    <h2 class="title-login title-primary">Olá, Aluno!</h2>
+                    <p class="description-login description-primary">Entre com suas informações</p>
+                    <p class="description-login description-primary">e inicie sua jornada conosco.</p>
+                    <button id="signup" class="btn-login btn-primary">Registre-se</button>
+    
+                </div><!-- FIRST COLUMMN -->
+                <div class="second-column">
+    
+                    <h2 class="title-login title-second">Login para usuarios</h2>
+    
+                    <div class="social-media">
+    
+                        <ul class="list-social-media">
+    
+    
+                        </ul>
+    
+                    </div><!-- SOCIAL MEDIA -->
+
+
+                    <form action="/login/login" method="POST" class="form-login">
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>>  
+
+                        <label class="label-input-login">
+                            <input type="email" name="email"  placeholder="Confirme aqui seu email INSTITUCIONAL">
+                        </label>
+                        <label class="label-input-login">
+                            <input type="password" name="password" class="form-control" placeholder="Confirme sua senha">
+                        </label>
+                            
+                        <button type="submit" class="btn-login btn-second">Logar</button>
+    
+                    </form>
+                </div><!-- SECOND COLUMN -->
+            </div><!-- SECOND CONTENT -->
+    
+        </div><!-- CONTAINER -->
+
+        
+
+        </section>
+
+        
+
+
+        <%- include('includes/footer'); %>

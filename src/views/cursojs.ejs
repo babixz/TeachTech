@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Teach Tech</title>
+ 
+
+</head>
+<body>
+
+  <STYle>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+
+/* SCROLL AQUI */
+
+
+::-webkit-scrollbar {
+width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: transparent;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+
+/* ESTRUTURA AQUI */
+
+
+body{
+  margin:0;
+  padding:0;
+  color: #242424;
+  font-family:'Poppins', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 900;
+  color: #000;
+}
+
+
+/* PARALLAX AQUI */
+
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: entrada-animacao 0.5s ease-in-out forwards;
+}
+
+@keyframes entrada-animacao {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main{
+  display: block;
+  background-color: #FFF;
+}
+
+.container{
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p{
+  margin-bottom: 40px;
+}
+
+section.module:last-child{
+  margin-bottom: 0;
+}
+
+section.module h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module.content{
+ padding: 40px 0;
+ background: #ece7d5; 
+}
+
+section.module.content:last-child{
+  background-color: #010101;
+}
+
+section.module.parallax{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+section.module.parallax:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+}
+
+
+/* LISTA AQUI */
+
+
+.card {
+  width: 100vh;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+ol {
+  margin: 5vh auto;
+  padding: auto;
+  font-size: 1em;
+  list-style-type: decimal-leading-zero;
+  display: flex;
+  flex-direction:column;
+}
+
+li{
+  font-size: 1.2em;
+  margin: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+}
+
+.card li span{
+  margin-top: auto;
+}
+
+.card ol li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #242424;
+  background-color: #ece7d5;
+  padding: 4px 10px;
+  border-radius: 25px;
+  transition: background-color 0.1s ease, transform 01s ease;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.card li a:hover{
+  background-color: #000;
+  color: #FFF;
+  transform:scale(1.1)
+}
+
+.card li:hover{
+  color: #242424;
+}
+
+li:last-child{
+  border: none;
+}
+
+section.module.parallax-1{
+  background-image: url(/javascript.jpg);
+}
+
+section.module.parallax-2{
+  background-image: url(/javascript2.png);
+}
+
+section.module.parallax-3{
+  background-image: url(/foto.png);
+}
+
+section.module.parallax h1{
+  color: #FFF;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 820px) {
+  section.module h2 {
+    font-size: 32px;
+  }
+  .module h2, p{
+    padding: 0 8px;
+  }
+
+  .container{
+    margin:0;
+    padding:0;
+  }
+
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+}
+  </STYle>
+  
+  <div class="wrapper">
+    <main>
+      <section class="module parallax parallax-1">
+        <h1></h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>SOBRE...</h2>
+          <p>
+            JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional). JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+          </p>
+          <p>
+            JS é uma linguagem de programação que permite a você implementar itens complexos em páginas web; toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática, mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos Animados 2D/3D, etc. Você pode apostar que o JavaScript provavelmente está envolvido.
+          </p>          
+        </div>
+      </section>
+
+      <section class="module parallax parallax-2">
+        <h1>método de aprendizado</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Video aulas gratuitas / PDFs</h2>
+          <p>
+            O método de ensino adotado por nós, será por meio de video aulas gratuitas disponibilzadas por parceiros na plataforma do YouTube. Também temos disponivel a opção de aulas escritas, por meio de PDFs.
+          </p>
+          <p>
+            Faça bom uso dos conteúdos disponibilizados, tudo estará organizado em tópicos e/ou aulas logo abaixo. De o primeiro passo para se tornar um profissional capacitado.
+          </p>
+          <p>
+            Faça bom proveito!
+          </p>          
+        </div>
+      </section>
+
+      <section class="module parallax parallax-3">
+        <h1>conteúdo</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h1>Curso Grátis de JavaScript e ECMAScript para Iniciantes</h1>
+          <div class="scroll">
+          <div class="card" id="myList">
+          <ol>
+            <li>Curso Grátis de JavaScript Moderno</a>  <span><a href="https://www.youtube.com/watch?v=BXqUH86F-kA&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=2">Video</a></li>
+            <li>Módulo A - Conhecendo o JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=uzEhd3Lugik&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=3">Video</a></li>
+            <li>O que o JavaScript é capaz de fazer? - Curso JavaScript #01</a>  <span><a href="https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4">Video</a></li>
+            <li>JavaScript: como chegamos até aqui? - Curso JavaScript #02</a>  <span><a href="https://www.youtube.com/watch?v=rUTKomc2gG8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=5">Video</a></li>
+            <li>Dando os primeiros passos - Curso JavaScript #03</a>  <span><a href="https://www.youtube.com/watch?v=FdePtO5JSd0&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=6">Video</a></li>
+            <li>Criando o seu primeiro script - Curso JavaScript #04</a>  <span><a href="https://www.youtube.com/watch?v=OmmJBfcMJA8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=7">Video</a></li>
+            <li>Módulo B - Comandos Básicos do JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=FjT97HVT5g8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=8">Video</a></li>
+            <li>Variáveis e Tipos Primitivos - Curso JavaScript #05</a>  <span><a href="https://www.youtube.com/watch?v=Vbabsye7mWo&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=9">Video</a></li>
+            <li>Tratamento de dados - Curso JavaScript #06</a>  <span><a href="https://www.youtube.com/watch?v=OJgu_KCCUSY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=10">Video</a></li>
+            <li>Operadores (Parte1) - Curso JavaScript #07</a>  <span><a href="https://www.youtube.com/watch?v=hZG9ODUdxHo&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=11">Video</a></li>
+            <li>Operadores (Parte 2) - Curso JavaScript #08</a>  <span><a href="https://www.youtube.com/watch?v=BP63NhITvao&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=12">Video</a></li>
+            <li>Módulo C - Entendendo o DOM</a>  <span><a href="https://www.youtube.com/watch?v=H80nCKs9c2k&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=13">Video</a></li>
+            <li>Introdução ao DOM - Curso JavaScript #09</a>  <span><a href="https://www.youtube.com/watch?v=WWZX8RWLxIk&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=14">Video</a></li>
+            <li>Eventos DOM - Curso JavaScript #10</a>  <span><a href="https://www.youtube.com/watch?v=wWnBB-mZIvY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=15">Video</a></li>
+            <li>Módulo D - Condições em JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=uPFasdmZHJc&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=16">Video</a></li>
+            <li>Condições (Parte 1) - Curso JavaScript #11</a>  <span><a href="https://www.youtube.com/watch?v=cOdG4eACN2A&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=17">Video</a></li>
+            <li>Condições (Parte 2) - Curso JavaScript #12</a>  <span><a href="https://www.youtube.com/watch?v=EEStcIe8rAM&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=18">Video</a></li>
+            <li>Exercícios JavaScript (Parte 1) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=b2K7eo5Jdj8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=19">Video</a></li>
+            <li>Exercícios JavaScript (Parte 2) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=UXSWgnbSHxs&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=20">Video</a></li>
+            <li>Exercícios JavaScript (Parte 3) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=f5es-PpaUI8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=21">Video</a></li>
+            <li>Módulo E - Repetições em JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=3emz6rpcJyA&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=22">Video</a></li>
+            <li>Repetições (Parte 1) - Curso JavaScript #13</a>  <span><a href="https://www.youtube.com/watch?v=5rZqYPKIwkY&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=23">Video</a></li>
+            <li>Repetições (Parte 2) - Curso JavaScript #14</a>  <span><a href="https://www.youtube.com/watch?v=eX-lkN_Zahc&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=24">Video</a></li>
+            <li>Exercícios JavaScript (Parte 4) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=6tyHypeY4-8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=25">Video</a></li>
+            <li>Exercícios JavaScript (Parte 5) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=oMNbc_LFz8w&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=26">Video</a></li>
+            <li>Exercícios JavaScript (Parte 6) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=mfHAQ-4Rspw&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=27">Video</a></li>
+            <li>Módulo F - Avançando os estudos em JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=5m4UhZd-Les&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=28">Video</a></li>
+            <li>Variáveis Compostas - Curso JavaScript #15</a>  <span><a href="https://www.youtube.com/watch?v=XdkW62tkAgU&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=29">Video</a></li>
+            <li>Funções - Curso JavaScript #16</a>  <span><a href="https://www.youtube.com/watch?v=mc3TKp2XzhI&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=30">Video</a></li>
+            <li>Exercícios JavaScript (Parte 7) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=vEOEZ03ZyiE&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=31">Video</a></li>
+            <li>Exercícios JavaScript (Parte 8) - Curso JavaScript</a>  <span><a href="https://www.youtube.com/watch?v=slLoLLCd-k0&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=32">Video</a></li>
+            <li>Próximos Passos - Curso JavaScript #17</a>  <span><a href="https://www.youtube.com/watch?v=roP93FA-NgU&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=33">Video</a></li>
+  
+          </ol>
+        </div>
+        </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+
+  //ANIMAÇÃO SUAVE DE LINKS
+document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+  </script>
+
+</body>
+</html>

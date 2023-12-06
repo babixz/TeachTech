@@ -1,0 +1,30 @@
+<header id="header">
+    <div class="container">
+        <div class="flex">
+            <a href="/">TEACH TECH</a>
+            <nav>
+                <ul>
+
+                    <% if(user) { %>
+                        <li>
+                            <a href="/cursohtml/index" class="scroll-link">HTML - CSS</a>
+                        </li>
+                        <li>
+                            <a href="/cursojs/index"  class="scroll-link">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="/cursophp/index"  class="scroll-link">PHP</a>
+                        </li>
+                    <li>
+                        <a href="/login/logout" style="color: red;" class="scroll-link">SAIR</a>
+                    </li>
+                    <% } else { %>
+                    <li>
+                        <a href="/login/index" class="scroll-link">LOGIN</a>
+                    </li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
